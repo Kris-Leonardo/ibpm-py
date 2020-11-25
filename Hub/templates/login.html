@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    <label>用户一号：</label><input type="text" name="user1"><br>
+    <label>用户二号：</label><input type="text" name="user2"><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<hr>
+{# 获取flask消息 #}
+{% for msg in get_flashed_messages() %}
+    <br>
+    {{ msg }}{{ " 登陆成功" }}
+{% endfor %}
+
+
+</body>
+</html>
